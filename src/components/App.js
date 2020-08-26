@@ -1,8 +1,8 @@
 import React from 'react';
 import firebase from 'firebase';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './App.css';
-import data from './data.json'
+import data from '../data.json'
 
 class App extends React.Component {
 
