@@ -1,9 +1,8 @@
 import React from 'react';
 import firebase from 'firebase';
-import logo from '../logo.svg';
-import './App.css';
 import data from '../data.json';
 import Grid from './Grid';
+import Form from './Form';
 
 class App extends React.Component {
 
@@ -38,6 +37,7 @@ class App extends React.Component {
       </div>
 
       <div>
+        <Form/>
         <Grid items = {this.state.data} />
       </div>
     </div>
