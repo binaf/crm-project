@@ -14,8 +14,8 @@ class App extends Component {
 
 updateData() {
   const db = firebase.firestore();
-  const settings = {timestampsInSnapshots: true};
-  db.settings(settings);
+  //const settings = {timestampsInSnapshots: true};
+  //db.settings(settings);
 
   db.collection('contacts').get()
     .then((snapshot) => {
@@ -29,7 +29,7 @@ updateData() {
       });
     })
     .catch((err) => {
-      console.log('Erreur!', err);
+      console.log('Erreur!', err); 
     });
   }  
 

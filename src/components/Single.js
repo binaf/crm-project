@@ -17,7 +17,7 @@ const Single = (props) => {
                     </div>
                 </div>
                 <div className="card-action">
-                    <button className="waves-effect waves-light btn red darken-4"><i class="material-icons">delete</i></button>
+                    <button className="waves-effect waves-light btn red darken-4"><i className="material-icons">delete</i></button>
                 </div>
             </div>
         </li>
