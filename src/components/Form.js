@@ -28,7 +28,7 @@ class Form extends Component {
                     <div class="row">
                         <div class="input-field col s8">
                             <input id="poste" type="text" class="validate"/>
-                            <label htmlFor="poste">Poste</label>
+                            <label htmlFor="poste">Notes</label>
                         </div>
                         <div class="input-field col s4">
                             <button className="btn waves-effect waves-light" type="submit" name="action">
