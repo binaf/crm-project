@@ -48,7 +48,7 @@ updateData() {
           </nav>
         </div>
         <div>
-          <Form />
+          <Form updateData={this.updateData.bind(this)}/>
           <Grid items={this.state.contacts}/>
         </div>
       </div>
