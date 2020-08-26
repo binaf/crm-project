@@ -1,42 +1,59 @@
-import React from 'react';
+import React, { Component } from 'react';
+import './App.css';
 import firebase from '../firebase';
 import Grid from './Grid';
 import Form from './Form';
 
-class App extends React.Component {
-
+class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state = { 
       contacts: []
-    };
+     };
   }
+
+updateData() {
+  const db = firebase.firestore();
+  const settings = {timestampsInSnapshots: true};
+  db.settings(settings);
+
+  db.collection('contacts').get()
+    .then((snapshot) => {
+      let contacts = [];
+      snapshot.forEach((doc) => {
+        let contact = Object.assign({id: doc.id }, doc.data());
+        contacts.push(contact);
+      });
+      this.setState({
+        contacts: contacts
+      });
+    })
+    .catch((err) => {
+      console.log('Erreur!', err);
+    });
+  }  
+
   componentWillMount() {
-    
+    this.updateData();
   }
 
   render() {
-
-  return (
-
-    <div>
-      <div className="navbar-fixed">
-        <nav className="blue lighten-2">
-          <div className="nav-wrapper">
-            <a href="/" className="brand-logo  center"> Contacts Team </a>
-          </div>
-        </nav>
-      </div>
-
+    return (
       <div>
-        <Form/>
-        <Grid items = {this.state.data} />
+        <div className="navbar-fixed">
+          <nav className="blue lighten-2">
+            <div className="nav-wrapper">
+              <a href="/" className="brand-logo center">Contacts</a>
+            </div>
+          </nav>
+        </div>
+        <div>
+          <Form />
+          <Grid items={this.state.contacts}/>
+        </div>
       </div>
-    </div>
-  );
-
+    );
   }
-
 }
 
 export default App;
