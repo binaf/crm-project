@@ -29,9 +29,18 @@ updateData() {
       });
     })
     .catch((err) => {
-      console.log('Erreur!', err); 
+      console.log('Erreur!', err);
     });
-  }  
+  } 
+  
+  deleteData(docID) {
+    const db = firebase.firestore();
+    //const settings = {timestampsInSnapshots: true};
+    //db.settings(settings);
+
+    db.collection('contacts').doc(docID).delete();
+    this.updateData();
+  }
 
   componentWillMount() {
     this.updateData();
@@ -49,7 +58,7 @@ updateData() {
         </div>
         <div>
           <Form updateData={this.updateData.bind(this)}/>
-          <Grid items={this.state.contacts}/>
+          <Grid items={this.state.contacts} deleteData={this.deleteData.bind(this)}/>
         </div>
       </div>
     );
