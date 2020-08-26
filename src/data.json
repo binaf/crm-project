@@ -1,0 +1,37 @@
+[
+    {
+      "prenom": "Ousmane",
+      "nom": "HAIDARA",
+      "email": "ousmane.haidara@web-rain.fr",
+      "compagnie": "Web Rain",
+      "notes": "developper fullstack"
+    },
+      {
+      "prenom": "Mohamed Ousmane",
+      "nom": "DIALLO",
+      "email": "mohamed.diallo@web-rain.fr",
+      "compagnie": "Web Rain",
+      "notes": "Developper fullstack"
+    },
+      {
+      "prenom": "Alhassane",
+      "nom": "MEGNINTA",
+      "email": "alhassane.megninta@web-rain.fr",
+      "compagnie": "Web Rain",
+      "notes": "Product ower"
+    },
+      {
+      "prenom": "Hawa",
+      "nom": "FOFANA",
+      "email": "hawa.fofana@web-rain.fr",
+      "compagnie": "Web Rain",
+      "notes": "Scrum master"
+    },
+    {
+        "prenom": "Sekou",
+        "nom": "DIARRA",
+        "email": "sekou.diarra@web-rain.fr",
+        "compagnie": "Web Rain",
+        "notes": "Scrum master"
+      }
+  ]

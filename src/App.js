@@ -2,9 +2,14 @@ import React from 'react';
 import firebase from 'firebase';
 import logo from './logo.svg';
 import './App.css';
+import data from './data.json'
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {data};
+  }
   componentWillMount() {
     firebase.initializeApp({
       apiKey: "AIzaSyCqM7m9yCFLEP0Ha4owxO3wz4ZBRtzhDgU",
