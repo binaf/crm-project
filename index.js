@@ -12,7 +12,7 @@ app.get('*', (req, res) => {
 res.sendFile(path.resolve(__dirname, 'app-react', 'build', 'index.html'));
 });
 // if not in production use the port 8080
-//const PORT = process.env.PORT || 8080;
-//console.log('Le serveur tourne sur le port:',PORT);
-//app.listen(PORT);
-app.listen(8080, '0.0.0.0');
+const PORT = process.env.PORT || 8080;
+console.log('Le serveur tourne sur le port:',PORT);
+app.listen(PORT, '0.0.0.0');
+//app.listen(8080, '0.0.0.0');
