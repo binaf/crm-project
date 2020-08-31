@@ -4,7 +4,11 @@
   "description": "serveur nodejs pour le deployment sur clever cloud",
   "main": "index.js",
   "scripts": {
+    "start" : "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines" : {
+    "node" : "^14.8.0"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/binaf/crm-project/issues"
   },
-  "homepage": "https://github.com/binaf/crm-project#readme"
+  "homepage": "https://github.com/binaf/crm-project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
