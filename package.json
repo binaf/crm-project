@@ -4,7 +4,7 @@
   "description": "serveur nodejs pour le deployment sur clever cloud",
   "main": "index.js",
   "scripts": {
-    "start" : "cd app-react && npm run build && cd .. && node index.js",
+    "start" : "cd app-react && npm install && npm run build && cd .. && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines" : {
