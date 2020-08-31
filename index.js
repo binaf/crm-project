@@ -15,4 +15,4 @@ res.sendFile(path.resolve(__dirname, 'app-react', 'build', 'index.html'));
 //const PORT = process.env.PORT || 8080;
 //console.log('Le serveur tourne sur le port:',PORT);
 //app.listen(PORT);
-app.listen(process.env.PORT, '0.0.0.0');
+app.listen(8080, '0.0.0.0');
